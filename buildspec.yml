@@ -1,0 +1,24 @@
+version 0.2
+
+env:
+   parameter-store:
+           DB_Name: "/sheoran/db_name"
+           DB_User: "/sheoran/db_user"
+           DB_Password: "/sheoran/db_password"
+           DB_host: "/sheoran/db_host"
+
+
+
+
+
+phases:
+   build:
+        commands:
+            - sed -i 's/database_name_here/'$DB_Name'/' wp-config.php
+            - sed -i 's/username_here/'$DB_User'/' wp-config.php
+            - sed -i 's/password_here/'$DB_Password'/' wp-config.php
+            - sed -i 's/localhost/'$DB_Host'/' wp-config.php
+
+artifacts:
+        files:
+            - '**/*'
