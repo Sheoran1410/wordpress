@@ -56,6 +56,10 @@ define( 'AUTH_SALT',        'D/j9)VrI&Du=*H<V;sgH5:SM)_~Y5EvB^Ac_YR047IJWgG7<L2o
 define( 'SECURE_AUTH_SALT', 'o#a;o~9&pnhHONRomEU*C9R}-%DpO8)ML@?dA0.6a;VPQX%XbxWPJ@:Z@x;xKGO6' );
 define( 'LOGGED_IN_SALT',   '};[S@%o& 0neT |bY.Lm2Q6vs7rSVjDhM{yR{g3)G2l:1ZC_GLWul1rDWu0i?R-e' );
 define( 'NONCE_SALT',       '[pIYls(]IeN/`|Ml,biDSp8Qs(nY{[Zs)H+BR;gln+_74Y=3&#YauJa=lgcvXj4t' );
+
+define('WP_HOME','https://aksheoran.squareops.co.in');
+define('WP_SITEURL','https://aksheoran.squareops.co.in');
+if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false)   $_SERVER['HTTPS']='on';
 /**#@-*/
 
 /**
